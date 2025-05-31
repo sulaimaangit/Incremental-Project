@@ -1,1 +1,2 @@
 "# Incremental-Project" 
+IPL Auction Management System is a web-based application designed to simulate and manage the Indian Premier League (IPL) player auction process. It allows users to conduct virtual auctions, manage teams, bid on players in real-time, and track auction history. The system aims to provide an engaging and organized platform for cricket enthusiasts, league organizers, or educational simulations of sports management.
