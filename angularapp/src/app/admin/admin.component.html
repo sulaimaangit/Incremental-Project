@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Admin Panel</h1>
+
+    <div>
+      <h2>Team List</h2>
+   
+        <app-team [teams]="teams"
+        [editedTeam]="editedTeam"
+        (editTeamEvent)="editTeam($event)"
+        (saveEditedTeamEvent)="saveEditedTeam()"
+        (cancelEditTeamEvent)="cancelEditTeam()"
+        (deleteTeamEvent)="deleteTeam($event)"
+        (createTeamEvent)="createTeam($event)">
+                  </app-team>
+    </div>
+    <div>
+      <h2>Player List</h2>
+      <app-player [players]="players"
+              [editedPlayer]="editedPlayer"
+              (editPlayerEvent)="editPlayer($event)"
+              (saveEditedPlayerEvent)="saveEditedPlayer()"
+              (cancelEditPlayerEvent)="cancelEditPlayer()"
+              (deletePlayerEvent)="deletePlayer($event)"
+              (createPlayerEvent)="createPlayer($event)"
+              >
+      </app-player>
+    </div>
+
+  </div>
+

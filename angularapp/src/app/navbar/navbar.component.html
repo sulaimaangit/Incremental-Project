@@ -1,0 +1,16 @@
+<div class="navcontainer">
+    <div>
+      <h3>IPL Bidding App</h3>
+    </div>
+    <div>
+      <ul type="none">
+        <li class="nav"><a routerLink="/home">Home</a></li>
+        <li class="nav" *ngIf="!role"><a routerLink="/register">Register</a></li>
+        <li class="nav" *ngIf="!role"><a routerLink="/login">Login</a></li>
+        <li *ngIf="role === 'ADMIN'"><a routerLink="/admin">Admin</a></li>
+        <li *ngIf="role === 'ORGANIZER'"><a routerLink="/organizer">Organizer</a></li>
+        <li *ngIf="role"><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+  

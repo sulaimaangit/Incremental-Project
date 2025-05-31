@@ -1,0 +1,23 @@
+.navcontainer{
+  display:flex;
+  justify-content: space-around;
+  background-color: rgb(49, 21, 211);
+  color:rgb(252, 251, 251);
+}
+li{
+  display: inline-block;
+  margin-left: 2rem;
+  color:white;
+  font-weight:bolder;
+}
+
+a{
+  color:white;
+  text-decoration:none;
+}
+.nav:hover{
+  background-color: darkblue;
+  color: white;
+  
+}
+

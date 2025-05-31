@@ -1,0 +1,58 @@
+<div class="nav-container">
+    <div class="logo">
+        <a routerLink="/" style="cursor: pointer;">IPL Bidding App</a>
+    </div>
+    <div class="menu">
+        <a routerLink="/" style="cursor: pointer;">Home</a>
+        <a routerLink="/register" style="cursor: pointer;">Register</a>
+        <a routerLink="/login" style="cursor: pointer;" (click)="logout()">LogOut</a>
+    </div>
+</div>
+
+ 
+<div class="organizer">
+    <h1 class="organizerclass">Organizer Panel</h1>
+
+    <div class="form-group" class="container1">
+        <h3>Unsold Players</h3>
+        <h6>Filter by category:</h6>
+        <select class="form-controll" #categorySelected (change)="filterPlayersByCategory(categorySelected.value)">
+            <option *ngFor="let categ of categories;index as i" [value]="categories[i]">{{categories[i]}}</option>
+        </select>
+        
+        <div *ngFor="let player of playersByCategory"  class="form-controll">
+          {{player.name}}(Age: {{player.age}})-Category: {{player.category}}
+          <select #selectedTeam>
+            <option *ngFor="let team of teams;" value="{{team.id}}">{{team.name}}</option> 
+          </select>
+          <button class="btn btn-primary" (click)="assignPlayerToTeamId(selectedTeam.value,player)">Assign to Team</button>
+           
+        </div>
+    </div>
+    
+
+    <div class="form-group" class="container2">
+        <h3>Team List</h3>
+        <ol>
+            <li *ngFor="let team of teams" class="boldMe">
+              <span style="font-weight:500;">{{team.name}} (Budget: {{team.maximumBudget}}) </span> 
+               <button class="btn btn-primary" (click)="getAllPlayersByTeamId(team.id,team.name)">Player List</button><br>
+            </li>
+        </ol>
+    </div>
+    <div class="container2">
+        <h3>Team : {{displayTeamName}}</h3>
+        <div *ngIf="showPlayerButtonClicked">
+            <ul>
+                <li *ngFor="let player of playersOfTeamId" class="list">
+                     Player Name: {{player.name}}
+                      Bidding Price: {{player.biddingPrice}}
+                    <button (click)="releasePlayerById(player.id)">Release Player</button>
+                </li>
+              </ul>
+           </div>
+    </div>
+</div>
+
+
+

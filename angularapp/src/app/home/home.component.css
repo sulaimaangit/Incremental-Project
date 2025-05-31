@@ -1,0 +1,33 @@
+.topnav {
+  background-color: rgb(231, 156, 15); 
+  list-style-type: none;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.topnav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+.center {
+margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.home-content{
+    justify-content: center;
+}
+body{
+  background-image: url('https://media.istockphoto.com/id/518022060/photo/cricket-batsman-hitting-ball-during-cricket-match-in-stadium.jpg?s=1024x1024&w=is&k=20&c=T6-ViNLlmDhnY65X5TAS2XPusqsHeAAwgbVkaET2s-E=');
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size:cover;
+  
+}
+html,body{
+  height: 100%;
+  margin: 0;
+}
