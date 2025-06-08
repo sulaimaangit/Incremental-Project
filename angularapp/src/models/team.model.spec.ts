@@ -10,6 +10,4 @@ describe('Team Models', () => {
     expect(team.name).toBe('Team A');
     expect(team.maximumBudget).toBe(1000000);
   });
-
-
 });
